@@ -1,0 +1,423 @@
+
+* {
+  box-sizing: border-box;
+  font-family: Garamound;
+ 
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+  background: radial-gradient( #537494,#1f3449 ,#0b1f25, #0b1f25);
+  background-repeat: 1;
+  background-position: fixed;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background-image: url("economic\ -\ Copie.jpg");
+  background-repeat: 1;
+  background-size: cover;
+  color: white;
+  background-color: rgb(11, 31, 37) 0.5;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background:linear-gradient(to left, #141718, #1f3449);
+  z-index: 3;
+  
+  border-bottom: 2px solid white;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: transform .5s;
+  z-index: 2;
+  align-items: baseline;
+  height: 100%;
+
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background:linear-gradient(to top, #537494, #2e3a46);
+  color: rgb(255, 255, 255);
+  transform: scale(1.2);
+  border-bottom: 2px solid #44586e;
+  box-shadow: 3px 3px 4px #333;
+  border-radius: 2px;
+}
+.navbar a.active{
+  border-bottom: 20x solid white;
+}
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background: linear-gradient(to right,rgb(16, 16, 45),#2e3a46 );
+  padding: 20px;
+  color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 5px 4px 4px #1c1b1b;
+  z-index:2;
+  border: 5px outset;
+  margin-top: 20px;
+}
+
+.side a{
+  color:rgb(154, 175, 175);
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  /*background-color: rgb(56, 59, 76);*/
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg{
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.fakeimgDoc{
+    background-color: #aaa;
+    width: 100%;
+  }
+
+.fakeimg1 {
+    background-image: url("sigla2.png");
+    width: 100%;
+    padding: 20px;
+    background-size: cover;
+    border: 5px double white;
+  }
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  height:auto;
+  font-size: large;
+  color: #62a4e7;
+}
+
+.footer a{
+  color:white;
+  text-decoration: none;
+}
+
+.footer a:hover{
+  color: #62a4e7;
+}
+
+.sectionMain{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+    box-shadow: 6px 10px 8px #141718;
+    padding: 10px;
+    border: 2px solid #20282f;
+    margin-bottom: 15px;
+    background-color: white;
+
+}
+
+.sectionMain h2{
+  background: linear-gradient(to right, rgb(16, 16, 45), rgb(231, 231, 98), rgb(114, 7, 7));
+  color: white;
+  border-radius: 5px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+
+.sideRight {
+  flex: 30%;
+  background: linear-gradient(to right,rgb(16, 16, 45),#2e3a46 );
+  padding: 20px;
+  color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 5px 4px 4px #1c1b1b;
+  z-index:2;
+  border: 5px outset;
+  margin-top: 20px;
+}
+
+.sideRight a{
+  color: #aaa;
+  text-decoration: none;
+}
+
+.sideRight a:hover{
+  color: #7e8ec0;
+  
+}
+
+.mainLeft {
+  flex: 70%;
+  color: white;
+  padding: 20px;
+}
+.mainLeft a{
+  color:#fff;
+  text-decoration: 2px double white;
+}
+
+.mainLeft a:hover{
+  color:#62a4e7
+}
+
+.mainLeft img{
+  width: 80%;
+}
+/* Style the section button */
+.section-button {
+  display: inline-block;
+  padding: 5px;
+  margin: 20px;
+  text-align: center;
+}
+
+.section-button label {
+  background-color: #20282f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hide the checkbox */
+#teachers-toggle1 {
+  display: none;
+}
+
+/* When the checkbox is checked, display the teachers section */
+#teachers-toggle1:checked + .teachers-section1 {
+  display: block;
+}
+
+/* Style the teachers section */
+.teachers-section1 {
+  display: none;
+  color:antiquewhite;
+  background:linear-gradient(to right, #141a20, #2e3a46);
+  border: 3px groove white;
+  margin-top: 20px;
+  border-radius: 3px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+}
+
+
+/* Hide the checkbox */
+#teachers-toggle2 {
+  display: none;
+}
+
+/* When the checkbox is checked, display the teachers section */
+#teachers-toggle2:checked + .teachers-section2 {
+  display: block;
+}
+
+/* Style the teachers section */
+.teachers-section2 {
+  display: none;
+  color:antiquewhite;
+  background:linear-gradient(to right, #141a20, #2e3a46);
+  border: 3px groove white;
+  margin-top: 20px;
+  border-radius: 3px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+}
+
+/* Hide the checkbox */
+#teachers-toggle3 {
+  display: none;
+}
+
+/* When the checkbox is checked, display the teachers section */
+#teachers-toggle3:checked + .teachers-section3 {
+  display: block;
+}
+
+/* Style the teachers section */
+.teachers-section3 {
+  display: none;
+  color:antiquewhite;
+  background:linear-gradient(to right, #141a20, #2e3a46);
+  border: 3px groove white;
+  margin-top: 20px;
+  border-radius: 3px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+}
+
+.doc {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.doc img {
+  height:15px;
+  
+}
+
+mark{
+  background: linear-gradient(to right, #62a4e7,#c6cfe9);
+}
+
+table{
+  border: 2px solid white;
+  text-align: center;
+  
+}
+
+ td, th{
+  border: 2px solid white;
+}
+th{
+  background-color: #1f3449;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+  opacity: 1;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 0;
+}
+.form{
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form a{
+  background: linear-gradient(to right, #141718,#2e3a46, #7e8ec0);
+  font-size: 60px;
+  border: 4px outset;
+  border-color: lightblue;
+  border-radius: 20%;
+  box-shadow: 10px 8px 8px #141718;
+  transition: transform .5s;
+  display: inline-block; 
+  text-align: center;
+}
+
+.form a:hover{
+  transform:scale(1.5);
+  color: white;
+}
+
+.mainLeft1 {
+  flex: 70%;
+  color: white;
+  padding: 20px;
+}
+.mainLeft1 a{
+  color:#fff;
+  text-decoration: 2px double white;
+}
+
+.mainLeft1 a:hover{
+  color:#62a4e7
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.announcement {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.announcement:hover {
+  background-color: rgb(28, 32, 59, 0.5);
+}
+
+.announcement-content {
+  display: none;
+  margin-top: 10px;
+}
+
+.announcement.active .announcement-content {
+  display: block;
+}
+
+.arrow{
+  height:20px;
+  max-width:40px;
+}
